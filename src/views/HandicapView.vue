@@ -3,12 +3,12 @@
 </template>
 
 <script>
-import handicapList from "@/views/handicaps/handicapList";
+import HandicapList from "@/views/handicaps/HandicapList";
 
 export default {
   name: 'HandicapView',
   components: {
-    handicapList
+    HandicapList
   }
 }
 </script>

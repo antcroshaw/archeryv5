@@ -1,12 +1,18 @@
 <template>
 <div class="container">
   <h2>Handicaps List Page</h2>
+  <div v-if="handicapCategories.length">
   <div v-for="handicaps in handicapCategories" :key="handicaps.id" class="handicaps">
-    <router-link :to="{ name: 'handicapDetails', params: {
+    <router-link :to="{ name: 'HandicapDetails', params: {
      id: handicaps.id
    }}"> <h2>{{ handicaps.title }}</h2></router-link>
   </div>
 </div>
+  <div v-else>
+    <p> Categories loading ....</p>
+  </div>
+</div>
+
 </template>
 
 <script>
@@ -14,11 +20,14 @@ export default {
   name: "handicapsList",
   data() {
     return {
-      handicapCategories: [
-        { title: 'Outdoor GNAS', id: 1, details: 'outdoor scores'},
-        { title: 'Indoor GNAS', id: 2, details: 'indoor scores'}
-      ]
+      handicapCategories: []
     }
+  },
+  mounted() {
+    fetch(' http://localhost:3000/handicapCategories')
+        .then(res => res.json())
+        .then(data => this.handicapCategories = data)
+        .catch(err => console.log(err.message))
   }
 }
 </script>

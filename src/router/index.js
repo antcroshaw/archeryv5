@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import HandicapView from "@/views/HandicapView";
-import handicapDetails from "@/views/handicaps/handicapDetails";
+import HandicapDetails from "@/views/handicaps/HandicapDetails";
+import HandicapScores from "@/views/HandicapScores";
 
 const routes = [
   {
@@ -24,8 +25,14 @@ const routes = [
   },
   {
     path: '/handicaps/:id',
-    name: 'handicapDetails',
-    component: handicapDetails,
+    name: 'HandicapDetails',
+    component: HandicapDetails,
+    props: true
+  },
+  {
+    path: '/handicapDetails/:id',
+    name: 'HandicapScores',
+    component: HandicapScores,
     props: true
   }
 ]
