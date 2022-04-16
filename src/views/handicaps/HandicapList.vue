@@ -2,10 +2,10 @@
 <div class="container">
   <h2>Handicaps List Page</h2>
   <div v-if="handicapCategories.length">
-  <div v-for="handicaps in handicapCategories" :key="handicaps.id" class="handicaps">
+  <div v-for="handicapCategories in handicapCategories" :key="handicapCategories.id" class="handicapCategories">
     <router-link :to="{ name: 'HandicapDetails', params: {
-     id: handicaps.id
-   }}"> <h2>{{ handicaps.title }}</h2></router-link>
+     id: handicapCategories.id
+   }}"> <h2>{{ handicapCategories.title }}</h2></router-link>
   </div>
 </div>
   <div v-else>
@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style scoped>
-.handicaps h2 {
+.handicapCategories h2 {
   background: #f4f4f4;
   padding: 20px;
   border-radius: 10px;
@@ -42,10 +42,10 @@ export default {
   cursor: pointer;
   color: #444;
 }
-.handicaps h2:hover {
+.handicapCategories h2:hover {
   background: #ddd;
 }
-.handicaps a {
+.handicapCategories a {
   text-decoration: none;
 }
 </style>

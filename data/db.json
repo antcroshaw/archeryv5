@@ -1,13 +1,38 @@
 {
-  "handicapCategories" : [
-    {"title":  "GNAS Outdoor", "id":  1, "details" :  "handicaps for outdoor archery"},
-    {"title":  "GNAS Indoor", "id":  2, "details" :  "handicaps for indoor archery"}
-
+  "handicapCategories": [
+    {
+      "title": "GNAS Outdoor",
+      "id": 1,
+      "details": "handicaps for outdoor archery"
+    },
+    {
+      "title": "GNAS Indoor",
+      "id": 2,
+      "details": "handicaps for indoor archery"
+    }
   ],
-  "handicaps" : [
-    {"name":  "Western", "id" :  1, "handicapCategoryId" :  1, "scores":  [11,13,14,45]},
-    {"name":  "Western II", "id" :  2, "handicapCategoryId" :  1, "scores":  [12,15,18,47]},
-    {"name":  "York", "id" :  3, "handicapCategoryId" :  2, "scores":  [10,10,14,45]},
-    {"name":  "American", "id" :  4, "handicapCategoryId" :  2, "scores":  [1,3,4,5]}
+  "handicaps": [
+    {
+      "name": "York",
+      "id": 3,
+      "handicapCategoryId": 2,
+      "scores": [
+        10,
+        10,
+        14,
+        45
+      ]
+    },
+    {
+      "name": "American",
+      "id": 4,
+      "handicapCategoryId": 1,
+      "scores": [
+        1,
+        3,
+        4,
+        5
+      ]
+    }
   ]
 }

@@ -1,13 +1,23 @@
 <template>
 
     <div class="handicaps"><h2>Category ID: {{ id }}</h2></div>
-    <p v-for="(value,index) in scores" key="index">{{ value }}</p>
+    <p v-for="(value,index) in scoresAsNumbers" key="index">{{ value }} <button @click="increaseScore(index)">+</button></p>
 
 </template>
 
 <script>
 export default {
-  props: ['id','scores']
+  props: ['id','scores'],
+  methods: {
+    increaseScore(index) {
+    this.scoresAsNumbers[index]++
+    }
+  },
+  computed: {
+    scoresAsNumbers(){
+      return this.scores.map(scores => parseInt(scores))
+    }
+  }
 }
 </script>
 
