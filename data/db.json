@@ -26,13 +26,36 @@
     {
       "name": "American",
       "id": 4,
-      "handicapCategoryId": 1,
+      "handicapCategoryId": 2,
       "scores": [
         1,
         3,
         4,
         5
       ]
+    },
+    {
+      "name": "tester",
+      "scores": [],
+      "handicapCategoryId": 1,
+      "id": 7
+    },
+    {
+      "name": "test3",
+      "scores": [],
+      "handicapCategoryId": 1,
+      "id": 8
+    },
+    {
+      "name": "ant1",
+      "scores": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "handicapCategoryId": 1,
+      "id": 9
     }
   ]
 }

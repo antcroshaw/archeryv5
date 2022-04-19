@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import HandicapView from "@/views/HandicapView";
 import HandicapDetails from "@/views/handicaps/HandicapDetails";
 import HandicapScores from "@/views/HandicapScores";
+import AddHandicap from "@/views/handicaps/AddHandicap";
 
 const routes = [
   {
@@ -33,6 +34,12 @@ const routes = [
     path: '/handicapDetails/:id',
     name: 'HandicapScores',
     component: HandicapScores,
+    props: true
+  },
+  {
+    path: '/handicaps/addHandicap',
+    name: 'AddHandicap',
+    component: AddHandicap,
     props: true
   }
 ]

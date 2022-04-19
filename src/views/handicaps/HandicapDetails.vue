@@ -2,15 +2,16 @@
 <div class="container">
   <h2>Handicaps In Category</h2>
   <div v-for="handicap in handicaps" :key="handicap.id" class="handicaps">
-    <router-link :to="{ name: 'HandicapScores', params: {
+    <h2><router-link :to="{ name: 'HandicapScores', params: {
      id: handicap.id, scores: handicap.scores
-   }}" > <h2>{{ handicap.name }}</h2></router-link>
+   }}" >{{ handicap.name }}</router-link>
 
         <span class="material-icons">edit</span>
-        <span @click="deleteHandicap(handicap.id)" class="material-icons">delete</span>
+      <span @click="deleteHandicap(handicap.id)" class="material-icons">delete</span></h2>
 
 
   </div>
+  <router-link :to="{ name: 'AddHandicap', params: { handicapCategoryId: id}}"><p>Add new handicap</p></router-link>
 </div>
 </template>
 
