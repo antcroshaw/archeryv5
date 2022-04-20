@@ -1,33 +1,31 @@
 <template>
-<h1>Add Handicap</h1>
+  <h1>Edit Handicap</h1>
   <form @submit.prevent="handleSubmit">
     <label>Name: </label>
-    <input type="text" required  v-model="name"/>
-    <button>Add Handicap</button>
+    <input type="text" required  v-model="name" />
+    <button>Update Handicap</button>
   </form>
+
 </template>
 
 <script>
 export default {
-  props: ['handicapCategoryId'],
+  props: ['id','name','handicapCategoryId'],
   data(){
     return {
-      name: ''
+      handicap: null,
+      uri: 'http://localhost:3000/handicaps/' + this.id
     }
-  },
-  mounted(){
-    console.log('Handicap Category: ' + this.handicapCategoryId)
   },
   methods: {
     handleSubmit() {
       let handicap = {
         name: this.name,
-        scores: [0,0,0,0],
-        handicapCategoryId: parseInt(this.handicapCategoryId)
+
       }
 
-      fetch('http://localhost:3000/handicaps', {
-        method: 'POST',
+      fetch(this.uri, {
+        method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(handicap)
       }).then(() => {

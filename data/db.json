@@ -35,19 +35,13 @@
       ]
     },
     {
-      "name": "tester",
-      "scores": [],
-      "handicapCategoryId": 1,
-      "id": 7
-    },
-    {
-      "name": "test3",
+      "name": "test43",
       "scores": [],
       "handicapCategoryId": 1,
       "id": 8
     },
     {
-      "name": "ant1",
+      "name": "ant1123",
       "scores": [
         0,
         0,
@@ -56,6 +50,28 @@
       ],
       "handicapCategoryId": 1,
       "id": 9
+    },
+    {
+      "name": "imagine12",
+      "scores": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "handicapCategoryId": 1,
+      "id": 10
+    },
+    {
+      "name": "youing123",
+      "scores": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "handicapCategoryId": 1,
+      "id": 11
     }
   ]
 }

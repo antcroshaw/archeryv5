@@ -4,6 +4,7 @@ import HandicapView from "@/views/HandicapView";
 import HandicapDetails from "@/views/handicaps/HandicapDetails";
 import HandicapScores from "@/views/HandicapScores";
 import AddHandicap from "@/views/handicaps/AddHandicap";
+import EditHandicap from "@/views/handicaps/EditHandicap";
 
 const routes = [
   {
@@ -41,6 +42,13 @@ const routes = [
     name: 'AddHandicap',
     component: AddHandicap,
     props: true
+  },
+  {
+    path: '/handicaps/editHandicap/:id',
+    name: 'EditHandicap',
+    component: EditHandicap,
+    props: true
+
   }
 ]
 

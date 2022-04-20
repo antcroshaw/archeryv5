@@ -6,7 +6,10 @@
      id: handicap.id, scores: handicap.scores
    }}" >{{ handicap.name }}</router-link>
 
+      <router-link :to="{ name: 'EditHandicap' , params: { id: handicap.id, name: handicap.name,
+       handicapCategoryId: handicap.handicapCategoryId}}">
         <span class="material-icons">edit</span>
+      </router-link>
       <span @click="deleteHandicap(handicap.id)" class="material-icons">delete</span></h2>
 
 
