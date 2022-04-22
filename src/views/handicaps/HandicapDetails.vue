@@ -1,7 +1,7 @@
 <template>
 <div class="container">
   <h2>Handicaps In Category</h2>
-  <div v-for="handicap in handicaps" :key="handicap.id" class="handicaps">
+  <div v-for="handicap in handicaps" :key="handicap.id" class="handicaps" >
     <h2><router-link :to="{ name: 'HandicapScores', params: {
      id: handicap.id, scores: handicap.scores
    }}" >{{ handicap.name }}</router-link>
@@ -46,6 +46,9 @@ export default {
       if(fetch(this.handicapUri + id, { method: 'DELETE' })
           .catch(err => console.log(err)))
         this.handleDelete(id)
+    },
+    increaseScore(e) {
+      console.log('hey')
     }
     }
 }
